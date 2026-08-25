@@ -10,11 +10,12 @@
   * **1.3.1 Perspectiva:** Sistema desktop con DB local.
 	* **1.3.2 Usuarios:** jefes, empleados. 
   1.4 PERSONAL INVOLUCRADO
-  |**Nombre**|Diego Andrés Salazar|
-  |---|---| 
-  |**Rol**|Analista y Desarrollador de Software|
- |**Categoría**|Profesional	Aprendiz ADSO - SENA|
- |**Responsabilidad**|Análisis, Diseño y Desarrollo|
+
+|**Nombre**|Diego Andrés Salazar|
+|---|---| 
+|**Rol**|Analista y Desarrollador de Software|
+|**Categoría**|Profesional	Aprendiz ADSO - SENA|
+|**Responsabilidad**|Análisis, Diseño y Desarrollo|
 
 ### 2. REFERENCIAS
   * Estándar IEEE29148:2018
@@ -76,7 +77,7 @@
 ### 3.5.1 RENDIMIENTO Y EFICIENCIA
 |**Requisito**|**Descripción**|
 |---|---|
-|´RNF-01´|El sistema deberá cargar todos los datos de productos y cotizaciones en menos de 1 seg|
+|`RNF-01`|El sistema deberá cargar todos los datos de productos y cotizaciones en menos de 1 seg|
 		
 ### 3.5.2 SEGURIDAD Y PRIVACIDAD
 |**Requisito**|**Descripción**|
@@ -242,17 +243,27 @@ DIAGRAMA DE CASO DE USO
 ### 3.5.8 HISTORIAS DE USUARIO
 
 `HU-01`: TÍTULO: ASIGNACIÓN DE ROLES
-Como superadministrador, Quiero asignar/cambiar el rol a un usuario del sistema, Para delegar la gestión operativa del software sin arriesgar a modificarlo o perder el control total.
+**Como** superadministrador, 
+**Quiero** asignar/cambiar el rol a un usuario del sistema, 
+**Para** delegar la gestión operativa del software sin arriesgar a modificarlo o perder el control total.
 
 `HU-02`: TÍTULO: LOGIN Y REGISTRO
-Como empleado/jefe Quiero registrarme/loguearme con las credenciales suministradas/propuestas en el formulario Para acceder al software.
+**Como** empleado/jefe 
+**Quiero** registrarme/loguearme con las credenciales suministradas/propuestas en el formulario 
+**Para** acceder al software.
 
 `HU-03`: TÍTULO: CRUD PRODUCTO
-Como administrador Quiero registrar un producto, verlo, actualizarlo y borrarlo Para gestión de inventario como función del software.
+**Como** administrador 
+**Quiero** registrar un producto, verlo, actualizarlo y borrarlo 
+**Para** gestión de inventario como función del software.
 
 `HU-04`: TÍTULO: CRUD COTIZACIÓN
-Como administrador/empleado Quiero registrar una cotización, verla y actualizarla o borrarla si no sirve Para llevar control y supervisión de esta función del software.
+**Como** administrador/empleado 
+**Quiero** registrar una cotización, verla y actualizarla o borrarla si no sirve 
+**Para** llevar control y supervisión de esta función del software.
 
 `HU-05`: TÍTULO: AUDITORÍA DE ACCIONES
-Como administrador/empleado Quiero visualizar los registros de acciones llevadas a cabo en una cotización y en un producto Para auditar los eventos del software.
+**Como** administrador/empleado 
+**Quiero** visualizar los registros de acciones llevadas a cabo en una cotización y en un producto 
+**Para** auditar los eventos del software.
 
