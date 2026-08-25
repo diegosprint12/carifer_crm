@@ -9,7 +9,7 @@
   ### 1.3 VISIÓN GENERAL
   * **1.3.1 Perspectiva:** Sistema desktop con DB local.
 	* **1.3.2 Usuarios:** jefes, empleados. 
-  1.4 PERSONAL INVOLUCRADO
+  ### 1.4 PERSONAL INVOLUCRADO
 
 |**Nombre**|Diego Andrés Salazar|
 |---|---| 
