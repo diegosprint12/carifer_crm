@@ -1,4 +1,4 @@
-<img width="300" height="169" alt="Suggestion" src="https://github.com/user-attachments/assets/cc696572-fd39-4f19-aa81-918b2f57ab11" /># ESPECIFICACIÓN DE REQUISITOS DE SOFTWARE
+# ESPECIFICACIÓN DE REQUISITOS DE SOFTWARE
 ## **Proyecto:** Carifer-CRM
 ---
 ### 1. INTRODUCCIÓN
@@ -74,33 +74,38 @@
 ### 3.5 REQUISITOS NO FUNCIONALES
 		
 ### 3.5.1 RENDIMIENTO Y EFICIENCIA
-		
+|**Requisito**|**Descripción**|
+|---|---|
 |´RNF-01´|El sistema deberá cargar todos los datos de productos y cotizaciones en menos de 1 seg|
 		
 ### 3.5.2 SEGURIDAD Y PRIVACIDAD
-
+|**Requisito**|**Descripción**|
+|---|---|
 |`RNF-02`|Las contraseñas de los usuarios deben ser almacenadas utilizando algoritmo mínimo Bcrypt, evitar algoritmos desfasados|
 |`RNF-03`|El sistema deberá aplicar mínimo el OWASP10|
 
 ### 3.5.3 FIABILIDAD Y DISPONIBILIDAD
-		
+|**Requisito**|**Descripción**|
+|---|---|		
 |`RNF-04`|El sistema deberá mantener disponibilidad del 100% desde el minuto 1|
 |`RNF-05`|Las actualizaciones nunca deberán afectar la integridad de los datos|
 		
 ### 3.5.4 USABILIDAD
-		
+|**Requisito**|**Descripción**|
+|---|---|		
 |`RNF-06`|Un usuario nuevo deberá ser capaz de registrar productos y crear cotizaciones en 4 minutos sin supervisión|
 		
 ### 3.5.6 MANTENIBILIDAD Y PORTABILIDAD
-		
+|**Requisito**|**Descripción**|
+|---|---|		
 |`RNF-07`|El software deberá ejecutarse correctamente en el equipo desde el primer momento de la instalación, podrá ejecutarse desde USB, será portable| 
 		
 ### 3.5.7 CASOS DE USO
-		
 DIAGRAMA DE CASO DE USO
 <img width="507" height="557" alt="DIAGRAMA DE CASO DE USO" src="https://github.com/user-attachments/assets/cc3403fa-fcd5-4f0f-9cec-6c743504bb5d" />
-	* Las flechas unidireccionales indican pertenencia única.
-	* Las flechas sin dirección indican pertenencia doble/múltiple.
+  
+  * Las flechas unidireccionales indican pertenencia única.
+  * Las flechas sin dirección indican pertenencia doble/múltiple.
 	
   FUNCIONALIDADES
   * CREAR INVENTARIO
