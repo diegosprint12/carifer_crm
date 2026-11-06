@@ -434,11 +434,39 @@
 * **1.a. Credenciales erróneas:** Error de autenticación al intentar acceder al módulo.
 * **1.b. Cancelación:** El usuario cancela manualmente la operación.
 ---
-### CASO DE USO 9: Eliminar Cotización
+### CASO DE USO 9: Rechazar Cotización
 
 | Propiedad | Detalle |
 |---|---|
-| **ID / Nombre** | `CU-09`: Eliminar Cotizaciones |
+| **ID / Nombre** | `CU-09`: Rechazar Cotizaciones |
+| **Descripción** | Proceso mediante el cual el personal autorizado rechaza cotizaciones. |
+| **Actores** | Empleado, Administrador |
+| **Precondición** | Estar autenticado como Empleado o Administrador; cliente no aceptó términos |
+| **Postcondición** | Se rechaza la cotización y entra a categoría de cotizaciones cerradas. |
+<img width="600" height="600" alt="CU09" src="https://github.com/user-attachments/assets/ef219504-e34d-43f9-9652-a7f33d8c1c72" />
+
+
+
+**Secuencia Normal:**
+
+1. El usuario ingresa al módulo de **cotizaciones**.
+2. El sistema carga las cotizaciones activas pendientes por revisión.
+3. El usuario selecciona **"Ver más detalles"**.
+4. El sistema despliega la cotización completa.
+5. El usuario presiona el botón de rechazo.
+6. El sistema despliega un modal de advertencia confirmando la acción.
+7. La cotización cambia su estado a **Rechazado** y entra en la categoría **"Cerradas"**.
+
+**Excepciones:**
+
+* **1.a. Credenciales erróneas:** Error de autenticación al intentar acceder al módulo.
+* **1.b. Cancelación:** El usuario cancela manualmente la operación.
+---
+### CASO DE USO 10: Eliminar Cotización
+
+| Propiedad | Detalle |
+|---|---|
+| **ID / Nombre** | `CU-10`: Eliminar Cotizaciones |
 | **Descripción** | Proceso mediante el cual el personal autorizado elimina cotizaciones. |
 | **Actores** | Administrador |
 | **Precondición** | Estar autenticado como Administrador, la cotización debe estar en estado **Pendiente** |
