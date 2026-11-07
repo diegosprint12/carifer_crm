@@ -491,29 +491,55 @@
 * **1.b. Cancelación:** El usuario cancela manualmente la operación.
 		
 ### 3.5.8 HISTORIAS DE USUARIO
+`HU-01`: TÍTULO: CREACIÓN DE USUARIOS
+**Como** superadministrador, 
+**Quiero** crear usuarios de tipo admin/empleado en el sistema, 
+**Para** delegar control y gestión del software de forma estructurada.
+**CRITERIOS DE ACEPTACIÓN**
+Criterio 1 (Registro exitoso):
+Dado que el admin/empleado se encuentra en el formulario de creación de cotizaciones,
+Cuando diligencia los campos obligatorios (cliente, ítems, montos) y hace clic en "Guardar",
+Entonces el sistema registra la cotización con estado inicial Pendiente y la muestra en el listado.
 
-`HU-01`: TÍTULO: ASIGNACIÓN DE ROLES
+Criterio 2 (Restricción de eliminación):
+
+Dado que el usuario intenta eliminar una cotización que ya fue confirmada o rechazada,
+
+Cuando hace clic en el botón de borrar,
+
+Entonces el sistema bloquea la acción y muestra un mensaje indicando que solo se pueden eliminar cotizaciones pendientes o en borrador.
+
+`HU-02`: TÍTULO: ASIGNACIÓN DE ROLES
 **Como** superadministrador, 
 **Quiero** asignar/cambiar el rol a un usuario del sistema, 
 **Para** delegar la gestión operativa del software sin arriesgar a modificarlo o perder el control total.
 
-`HU-02`: TÍTULO: LOGIN Y REGISTRO
-**Como** empleado/jefe 
-**Quiero** registrarme/loguearme con las credenciales suministradas/propuestas en el formulario 
+`HU-03`: TÍTULO: LOGIN
+**Como** admin/empleado 
+**Quiero** loguearme con las credenciales suministradas/propuestas en el formulario 
 **Para** acceder al software.
 
-`HU-03`: TÍTULO: CRUD PRODUCTO
+`HU-04`: TÍTULO: LOGOUT
+**Como** admin/empleado 
+**Quiero** destruir la sesión de forma sencilla, 
+**Para** acabar mis actividades de forma segura.
+
+`HU-05`: TÍTULO: CRUD PRODUCTO
 **Como** administrador 
 **Quiero** registrar un producto, verlo, actualizarlo y borrarlo 
 **Para** gestión de inventario como función del software.
 
-`HU-04`: TÍTULO: CRUD COTIZACIÓN
+`HU-06`: TÍTULO: CRUD COTIZACIÓN
 **Como** administrador/empleado 
 **Quiero** registrar una cotización, verla y actualizarla o borrarla si no sirve 
 **Para** llevar control y supervisión de esta función del software.
 
-`HU-05`: TÍTULO: AUDITORÍA DE ACCIONES
+`HU-07`: TÍTULO: CONFIRMACION/RECHAZO
+**Como** admin/empleado 
+**Quiero** confirmar/rechazar cotizaciones, 
+**Para** gestionar y calificar estos documentos según estado.
+
+`HU-08`: TÍTULO: AUDITORÍA DE ACCIONES
 **Como** administrador/empleado 
 **Quiero** visualizar los registros de acciones llevadas a cabo en una cotización y en un producto 
 **Para** auditar los eventos del software.
-
