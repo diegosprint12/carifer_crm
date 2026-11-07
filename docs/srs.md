@@ -491,129 +491,145 @@
 * **1.b. Cancelación:** El usuario cancela manualmente la operación.
 		
 ### 3.5.8 HISTORIAS DE USUARIO
-`HU-01`: TÍTULO: CREACIÓN DE USUARIOS
-**Como** superadministrador, 
-**Quiero** crear usuarios de tipo admin/empleado en el sistema, 
-**Para** delegar control y gestión del software de forma estructurada.
-**CRITERIOS DE ACEPTACIÓN**
+
+`HU-01`: TÍTULO: CREACIÓN DE USUARIOS  
+**Como** superadministrador,  
+**Quiero** crear usuarios de tipo admin/empleado en el sistema,  
+**Para** delegar control y gestión del software de forma estructurada.  
+**CRITERIOS DE ACEPTACIÓN**  
 ---
-**1. Creación exitosa**:
-**Dado** que el superadministrador se encuentra en el módulo de gestión de usuarios,
-**Cuando** diligencia los datos obligatorios y hace clic en "Guardar",
+**1. Creación exitosa**:  
+**Dado** que el superadministrador se encuentra en el módulo de gestión de usuarios,  
+**Cuando** diligencia los datos obligatorios y hace clic en "Guardar",  
 **Entonces** el sistema registra el nuevo usuario en la base de datos y lo muestra en el listado general.
 
-**2. Validación de dato duplicado**:
-**Dado** que el superadministrador intenta registrar un usuario con un campo duplicado que ya existe en el sistema,
-**Cuando** intenta guardar el formulario,
+**2. Validación de dato duplicado**:  
+**Dado** que el superadministrador intenta registrar un usuario con un campo duplicado que ya existe en el sistema,  
+**Cuando** intenta guardar el formulario,  
 **Entonces** el sistema bloquea la acción y muestra un mensaje de error indicando que el campo ya está registrado.
 
-`HU-02`: TÍTULO: ASIGNACIÓN DE ROLES
-**Como** superadministrador, 
-**Quiero** asignar/cambiar el rol a un usuario del sistema, 
-**Para** delegar la gestión operativa del software sin arriesgar a modificarlo o perder el control total.
-**CRITERIOS DE ACEPTACIÓN**
 ---
-**1. Cambio de rol exitoso**:
-**Dado** que el superadministrador entra al módulo de gestión de usuarios y selecciona uno,
-**Cuando** selecciona un nuevo rol en el selector y confirma los cambios,
+
+`HU-02`: TÍTULO: ASIGNACIÓN DE ROLES  
+**Como** superadministrador,  
+**Quiero** asignar/cambiar el rol a un usuario del sistema,  
+**Para** delegar la gestión operativa del software sin arriesgar a modificarlo o perder el control total.  
+**CRITERIOS DE ACEPTACIÓN**  
+---
+**1. Cambio de rol exitoso**:  
+**Dado** que el superadministrador entra al módulo de gestión de usuarios y selecciona uno,  
+**Cuando** selecciona un nuevo rol en el selector y confirma los cambios,  
 **Entonces** el sistema actualiza los permisos del usuario de manera inmediata y registra el cambio.
 
-**2. Restricción de privilegios**:
-**Dado** que un usuario con rol de empleado/admin intenta acceder a la opción de modificar roles,
-**Cuando** intenta ingresar a dicha sección,
+**2. Restricción de privilegios**:  
+**Dado** que un usuario con rol de empleado/admin intenta acceder a la opción de modificar roles,  
+**Cuando** intenta ingresar a dicha sección,  
 **Entonces** el sistema le niega el acceso o le oculta la opción por falta de permisos.
 
-`HU-03`: TÍTULO: LOGIN
-**Como** admin/empleado 
-**Quiero** loguearme con las credenciales suministradas/propuestas en el formulario 
-**Para** acceder al software.
-**CRITERIOS DE ACEPTACIÓN**
 ---
-**1. Inicio de sesión exitoso**:
-**Dado** que un usuario registrado ingresa su usuario y contraseña correctos,
-**Cuando** hace clic en "Ingresar",
+
+`HU-03`: TÍTULO: LOGIN  
+**Como** admin/empleado  
+**Quiero** loguearme con las credenciales suministradas/propuestas en el formulario  
+**Para** acceder al software.  
+**CRITERIOS DE ACEPTACIÓN**  
+---
+**1. Inicio de sesión exitoso**:  
+**Dado** que un usuario registrado ingresa su usuario y contraseña correctos,  
+**Cuando** hace clic en "Ingresar",  
 **Entonces** el sistema valida las credenciales, inicia la sesión y lo redirige al panel principal según su rol.
-**2. Credenciales incorrectas**:
-**Dado** que un usuario ingresa un usuario o contraseña inválidos en la pantalla de inicio de sesión,
-**Cuando** hace clic en el botón "Ingresar",
+
+**2. Credenciales incorrectas**:  
+**Dado** que un usuario ingresa un usuario o contraseña inválidos en la pantalla de inicio de sesión,  
+**Cuando** hace clic en el botón "Ingresar",  
 **Entonces** el sistema rechaza el acceso y muestra una alerta genérica de error de autenticación.
+
 ---
-`HU-04`: TÍTULO: LOGOUT
-**Como** admin/empleado 
-**Quiero** destruir la sesión de forma sencilla, 
-**Para** acabar mis actividades de forma segura.
-**CRITERIOS DE ACEPTACIÓN**
+
+`HU-04`: TÍTULO: LOGOUT  
+**Como** admin/empleado  
+**Quiero** destruir la sesión de forma sencilla,  
+**Para** acabar mis actividades de forma segura.  
+**CRITERIOS DE ACEPTACIÓN**  
 ---
-**1. Cierre de sesión manual**:
-**Dado** que un usuario se encuentra autenticado dentro del sistema,
-**Cuando** hace clic en el botón o opción de "Cerrar sesión",
+**1. Cierre de sesión manual**:  
+**Dado** que un usuario se encuentra autenticado dentro del sistema,  
+**Cuando** hace clic en el botón o opción de "Cerrar sesión",  
 **Entonces** el sistema destruye la sesión activa y lo redirige de manera segura a la pantalla de login.
+
 ---
-`HU-05`: TÍTULO: CRUD PRODUCTO
-**Como** administrador 
-**Quiero** registrar un producto, verlo, actualizarlo y borrarlo 
-**Para** gestión de inventario como función del software.ç
-**CRITERIOS DE ACEPTACIÓN**
+
+`HU-05`: TÍTULO: CRUD PRODUCTO  
+**Como** administrador  
+**Quiero** registrar un producto, verlo, actualizarlo y borrarlo  
+**Para** gestión de inventario como función del software.  
+**CRITERIOS DE ACEPTACIÓN**  
 ---
-**1. Registro de producto**:
-**Dado** que el administrador está en el módulo de inventario,
-**Cuando** completa los datos obligatorios del producto y guarda,
+**1. Registro de producto**:  
+**Dado** que el administrador está en el módulo de inventario,  
+**Cuando** completa los datos obligatorios del producto y guarda,  
 **Entonces** el sistema almacena el registro y lo refleja en el catálogo de productos.
 
-**2. Actualización de stock/precio**:
-**Dado** que el administrador selecciona un producto existente para editarlo,
-**Cuando** modifica su precio o cantidad y confirma los cambios,
+**2. Actualización de stock/precio**:  
+**Dado** que el administrador selecciona un producto existente para editarlo,  
+**Cuando** modifica su precio o cantidad y confirma los cambios,  
 **Entonces** el sistema actualiza la información en tiempo real.
 
-**3. Eliminación de producto**
-**Dado** que el administrador decide eliminar un producto obsoleto,
-**Cuando** hace clic en borrar y confirma la acción,
+**3. Eliminación de producto**:  
+**Dado** que el administrador decide eliminar un producto obsoleto,  
+**Cuando** hace clic en borrar y confirma la acción,  
 **Entonces** el sistema remueve el producto del inventario activo.
+
 ---
-`HU-06`: TÍTULO: CRUD COTIZACIÓN
-**Como** administrador/empleado 
-**Quiero** registrar una cotización, verla y actualizarla o borrarla si no sirve 
-**Para** llevar control y supervisión de esta función del software.
-**CRITERIOS DE ACEPTACIÓN**
+
+`HU-06`: TÍTULO: CRUD COTIZACIÓN  
+**Como** administrador/empleado  
+**Quiero** registrar una cotización, verla y actualizarla o borrarla si no sirve  
+**Para** llevar control y supervisión de esta función del software.  
+**CRITERIOS DE ACEPTACIÓN**  
 ---
-**1. Registro exitoso**:
-**Dado** que el admin/empleado se encuentra en el formulario de creación de cotizaciones,
-**Cuando** diligencia los campos obligatorios y hace clic en "Guardar",
+**1. Registro exitoso**:  
+**Dado** que el admin/empleado se encuentra en el formulario de creación de cotizaciones,  
+**Cuando** diligencia los campos obligatorios y hace clic en "Guardar",  
 **Entonces** el sistema registra la cotización con estado inicial Pendiente y la muestra en el listado.
 
-**2. Restricción de eliminación**:
-**Dado** que el usuario intenta eliminar una cotización que ya fue confirmada o rechazada,
-**Cuando** hace clic en el botón de borrar,
+**2. Restricción de eliminación**:  
+**Dado** que el usuario intenta eliminar una cotización que ya fue confirmada o rechazada,  
+**Cuando** hace clic en el botón de borrar,  
 **Entonces** el sistema bloquea la acción y muestra un mensaje indicando que solo se pueden eliminar cotizaciones pendientes o en borrador.
+
 ---
-`HU-07`: TÍTULO: CONFIRMACION/RECHAZO
-**Como** admin/empleado 
-**Quiero** confirmar/rechazar cotizaciones, 
-**Para** gestionar y calificar estos documentos según estado.
-**CRITERIOS DE ACEPTACIÓN**
---
-**1. Cambio a Confirmada**:
-**Dado** que el usuario está visualizando el detalle de una cotización en estado Pendiente,
-**Cuando** hace clic en el botón "Confirmar" y acepta el modal,
+
+`HU-07`: TÍTULO: CONFIRMACION/RECHAZO  
+**Como** admin/empleado  
+**Quiero** confirmar/rechazar cotizaciones,  
+**Para** gestionar y calificar estos documentos según estado.  
+**CRITERIOS DE ACEPTACIÓN**  
+---
+**1. Cambio a Confirmada**:  
+**Dado** que el usuario está visualizando el detalle de una cotización en estado Pendiente,  
+**Cuando** hace clic en el botón "Confirmar" y acepta el modal,  
 **Entonces** el sistema cambia su estado a Confirmada y desactiva los botones de edición de montos.
 
-**2. Cambio a Rechazada**:
-**Dado** que el usuario está visualizando el detalle de una cotización en estado Pendiente,
-**Cuando** hace clic en el botón "Rechazar" y acepta el modal,
+**2. Cambio a Rechazada**:  
+**Dado** que el usuario está visualizando el detalle de una cotización en estado Pendiente,  
+**Cuando** hace clic en el botón "Rechazar" y acepta el modal,  
 **Entonces** el sistema actualiza el estado de la cotización a Rechazada impidiendo futuras modificaciones comerciales.
+
 ---
-`HU-08`: TÍTULO: AUDITORÍA DE ACCIONES
-**Como** administrador/empleado 
-**Quiero** visualizar los registros de acciones llevadas a cabo en una cotización y en un producto 
-**Para** auditar los eventos del software.
-**CRITERIOS DE ACEPTACIÓN**
---
-**1. Registro automático de eventos**:
-**Dado** que un usuario realiza una acción relevante (como crear un producto o cambiar el estado de una cotización),
-**Cuando** se ejecuta la acción con éxito,
+
+`HU-08`: TÍTULO: AUDITORÍA DE ACCIONES  
+**Como** administrador/empleado  
+**Quiero** visualizar los registros de acciones llevadas a cabo en una cotización y en un producto  
+**Para** auditar los eventos del software.  
+**CRITERIOS DE ACEPTACIÓN**  
+---
+**1. Registro automático de eventos**:  
+**Dado** que un usuario realiza una acción relevante (como crear un producto o cambiar el estado de una cotización),  
+**Cuando** se ejecuta la acción con éxito,  
 **Entonces** el sistema guarda automáticamente en la bitácora de auditoría la fecha, la hora, el usuario que la realizó y la acción efectuada.
 
-**2. Visualización de la auditoría**:
-**Dado** que el usuario accede al módulo de auditoría,
-**Cuando** selecciona una cotización o un producto específico,
+**2. Visualización de la auditoría**:  
+**Dado** que el usuario accede al módulo de auditoría,  
+**Cuando** selecciona una cotización o un producto específico,  
 **Entonces** el sistema despliega el historial cronológico detallado de todos los cambios registrados sobre ese elemento.
