@@ -482,7 +482,7 @@
 		
 ### 3.5.8 HISTORIAS DE USUARIO
 
-`HU-01`: TÍTULO: CREACIÓN DE USUARIOS  
+`HU-01`: CREACIÓN DE USUARIOS  
 **Como** superadministrador,  
 **Quiero** crear usuarios de tipo admin/empleado en el sistema,  
 **Para** delegar control y gestión del software de forma estructurada.  
@@ -500,7 +500,7 @@
 **Entonces** el sistema bloquea la acción y muestra un mensaje de error indicando que el campo ya está registrado.
 
 
-`HU-02`: TÍTULO: ASIGNACIÓN DE ROLES  
+`HU-02`: ASIGNACIÓN DE ROLES  
 **Como** superadministrador,  
 **Quiero** asignar/cambiar el rol a un usuario del sistema,  
 **Para** delegar la gestión operativa del software sin arriesgar a modificarlo o perder el control total.  
@@ -518,7 +518,7 @@
 **Entonces** el sistema le niega el acceso o le oculta la opción por falta de permisos.
 
 
-`HU-03`: TÍTULO: LOGIN  
+`HU-03`: LOGIN  
 **Como** admin/empleado  
 **Quiero** loguearme con las credenciales suministradas/propuestas en el formulario  
 **Para** acceder al software.  
@@ -537,7 +537,7 @@
 
 
 
-`HU-04`: TÍTULO: LOGOUT  
+`HU-04`: LOGOUT  
 **Como** admin/empleado  
 **Quiero** destruir la sesión de forma sencilla,  
 **Para** acabar mis actividades de forma segura.  
@@ -551,7 +551,7 @@
 
 
 
-`HU-05`: TÍTULO: CRUD PRODUCTO  
+`HU-05`: CRUD PRODUCTO  
 **Como** administrador  
 **Quiero** registrar un producto, verlo, actualizarlo y borrarlo  
 **Para** gestión de inventario como función del software.  
@@ -574,7 +574,7 @@
 **Entonces** el sistema remueve el producto del inventario activo.
 
 
-`HU-06`: TÍTULO: CRUD COTIZACIÓN  
+`HU-06`: CRUD COTIZACIÓN  
 **Como** administrador/empleado  
 **Quiero** registrar una cotización, verla y actualizarla o borrarla si no sirve  
 **Para** llevar control y supervisión de esta función del software.  
@@ -591,7 +591,7 @@
 **Cuando** hace clic en el botón de borrar,  
 **Entonces** el sistema bloquea la acción y muestra un mensaje indicando que solo se pueden eliminar cotizaciones pendientes o en borrador.
 
-`HU-07`: TÍTULO: CONFIRMACION/RECHAZO  
+`HU-07`: CONFIRMACION/RECHAZO  
 **Como** admin/empleado  
 **Quiero** confirmar/rechazar cotizaciones,  
 **Para** gestionar y calificar estos documentos según estado.  
@@ -610,7 +610,7 @@
 
 
 
-`HU-08`: TÍTULO: AUDITORÍA DE ACCIONES  
+`HU-08`: AUDITORÍA DE ACCIONES  
 **Como** administrador/empleado  
 **Quiero** visualizar los registros de acciones llevadas a cabo en una cotización y en un producto  
 **Para** auditar los eventos del software.  
