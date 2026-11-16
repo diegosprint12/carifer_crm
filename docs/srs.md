@@ -102,6 +102,7 @@
 |`RNF-07`|El software deberá ejecutarse correctamente en el equipo desde el primer momento de la instalación, podrá ejecutarse desde USB, será portable| 
 		
 ### 3.5.7 CASOS DE USO
+
 ## GESTIÓN DE USUARIOS Y ROLES
 ### CASO DE USO 1: Registrar Administrador
 | Propiedad | Detalle |
@@ -240,7 +241,7 @@
 
 **Excepciones:**
 
-* **1.a. Código duplicado:** El sistema es *case insensitive*. Los nombres pueden repetirse, pero el código único (generado automáticamente por la base de datos) no. Si existe duplicado, se aborta la inserción.
+* **1.a. Código duplicado:** El sistema es *case insensitive*. Los nombres pueden repetirse, pero el código comercial único, ingresado manualmente por el usuario correspondiente, no.
 * **1.b. Cancelación:** Si el administrador cancela el registro, finaliza el caso de uso.
 ---
 
@@ -248,7 +249,7 @@
 
 | Propiedad | Detalle |
 |---|---|
-| **ID / Nombre** | `CU-02`: Crear Inventario |
+| **ID / Nombre** | `CU-02`: Editar Inventario |
 | **Descripción** | Describe paso a paso el proceso del personal encargado de editar un producto existente en el inventario. |
 | **Actores** | Administrador, Empleado |
 | **Precondición** | Estar autenticado como Administrador/Empleado, el producto debe estar registrado/creado. |
@@ -268,8 +269,7 @@
 
 **Excepciones:**
 
-* **1.a. ID inexistente:** Si se está editando un producto fantasma que no ha sido refrescado. 
-* **1.b. Cancelación:** Si el administrador cancela la edición, finaliza el caso de uso.
+* **1.a. Cancelación:** Si el administrador cancela la edición, finaliza el caso de uso.
 
 ---
 
@@ -297,7 +297,6 @@
 **Excepciones:**
 
 * **1.a. Cancelación:** El administrador cancela la alerta de eliminación; finaliza el caso de uso.
-* **1.b. ID inexistente:** El producto ya ha sido eliminado, pero no se ha refrescado el panel. 
 
 ---
 
@@ -315,15 +314,13 @@
 
 **Secuencia Normal:**
 
-1. El usuario ingresa al sistema.
-2. El sistema carga todos los productos registrados.
-3. El usuario visualiza los datos detallados: cantidad, fecha de inscripción, ventas/cotizaciones asociadas o estado de stock.
-4. El usuario finaliza la consulta o cierra la sesión.
+1. El usuario entra al panel de productos.
+2. El usuario visualiza los datos detallados: cantidad, fecha de inscripción, ventas/cotizaciones asociadas o estado de stock.
+3. El usuario cierra el panel de productos o destruye la sesión.
 
 **Excepciones:**
 
-* **1.a. Credenciales erróneas:** Los datos de ingreso son incorrectos; no se carga el inventario.
-* **1.b. Sesión finalizada:** La sesión se destruye antes de completar la lectura; finaliza el caso de uso.
+* **1.a. Filtro sin resultados**: No retornaron resultados al usarse algún filtrado para búsqueda.
 
 ---
 
@@ -349,8 +346,7 @@
 
 **Excepciones:**
 
-* **1.a. Código duplicado:** El código de cotización es autogenerado. En caso de colisión de ID, el registro falla.
-* **1.b. Cancelación:** El usuario cancela el llenado del formulario; se termina el caso de uso.
+* **1.a. Cancelación:** El usuario cancela el llenado del formulario; se termina el caso de uso.
 
 ---
 
@@ -375,8 +371,7 @@
 
 **Excepciones:**
 
-* **1.a. Credenciales erróneas:** Error de autenticación al intentar acceder al módulo.
-* **1.b. Cierre de sesión:** El usuario destruye la sesión antes de confirmar la acción; finaliza el caso de uso.
+1.a. Filtro sin resultados: No retornaron resultados al usarse algún filtrado para búsqueda.
 
 ---
 
@@ -394,16 +389,14 @@
 **Secuencia Normal:**
 
 1. El usuario ingresa al módulo de **cotizaciones**.
-2. El sistema carga las cotizaciones activas pendientes por revisión.
+2. El sistema carga las cotizaciones activas **pendientes** por revisión.
 3. El usuario selecciona la opción de editar.
 4. El sistema muestra el formulario con campos bloqueados y otros disponibles para edición.
 5. El usuario confirma la operación y el sistema muestra un aviso de validación del cambio.
 
 **Excepciones:**
 
-* **1.a. Credenciales erróneas:** Error de autenticación al intentar acceder al módulo.
-* **1.b. Cancelación:** El usuario cancela manualmente la operación.
-* **1.c. Cierre de sesión:** El usuario destruye la sesión antes de confirmar la acción; finaliza el caso de uso.
+* **1.a. Cancelación:** El usuario cancela manualmente la operación.
 
 ---
 
@@ -431,8 +424,7 @@
 
 **Excepciones:**
 
-* **1.a. Credenciales erróneas:** Error de autenticación al intentar acceder al módulo.
-* **1.b. Cancelación:** El usuario cancela manualmente la operación.
+* **1.a. Cancelación:** El usuario cancela manualmente la operación.
 ---
 ### CASO DE USO 9: Rechazar Cotización
 
@@ -459,8 +451,7 @@
 
 **Excepciones:**
 
-* **1.a. Credenciales erróneas:** Error de autenticación al intentar acceder al módulo.
-* **1.b. Cancelación:** El usuario cancela manualmente la operación.
+* **1.a. Cancelación:** El usuario cancela manualmente la operación.
 ---
 ### CASO DE USO 10: Eliminar Cotización
 
@@ -487,8 +478,7 @@
 
 **Excepciones:**
 
-* **1.a. Credenciales erróneas:** Error de autenticación al intentar acceder al módulo.
-* **1.b. Cancelación:** El usuario cancela manualmente la operación.
+* **1.a. Cancelación:** El usuario cancela manualmente la operación.
 		
 ### 3.5.8 HISTORIAS DE USUARIO
 
